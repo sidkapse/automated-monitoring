@@ -24,8 +24,9 @@ Globals:
       Role: !Ref CodeDeployRole
 
 Resources:
-  HelloWorld:
+  ToMSTeamsChannel:
     Type: AWS::Serverless::Function
+    Description: Sending to MS Teams Channel
     Properties:
       FunctionName: !Sub 'awscodestar-${ProjectId}-lambda-HelloWorld'
       Handler: index.handler
